@@ -1,0 +1,23 @@
+---
+description: 프로젝트 기준 경로(볼륨) 고정 규칙
+globs: "**/*"
+alwaysApply: true
+---
+
+# Project Root Path (Do not drift)
+
+## 기준 경로 (authoritative)
+- 이 프로젝트의 작업 기준 경로는 다음 볼륨/폴더 하위입니다.
+  - **Workspace volume root**: `/Volumes/Exe, Todo(md,book,app)_2T mac/cursor`
+  - **Repo root**: `/Volumes/Exe, Todo(md,book,app)_2T mac/cursor/2026_ai`
+
+## 필수 규칙
+- 파일 생성/수정/저장/탐색은 **반드시** Repo root 하위에서만 수행하세요.
+- `~/`(예: `/Users/daecheolkim`) 또는 다른 디렉터리로 파일을 만들거나 저장하지 마세요.
+- 경로가 불명확할 때는 “홈 디렉터리 추정” 대신, 위 Repo root를 기준으로 상대 경로를 사용하세요.
+
+## 이 레포의 실제 앱 위치 (현재 기준)
+- 문서: `apps/docs/*`
+- 웹앱(Next.js): `apps/web/*`
+- 공용 UI 패키지: `packages/ui/*`
+
